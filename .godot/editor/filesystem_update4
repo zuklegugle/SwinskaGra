@@ -1,0 +1,5 @@
+res://base_tile/base_tile.tscn
+res://base_tile/base_tile.gd
+res://tile_board/tile_board.tscn
+res://tile_board/tile_board.gd
+res://test_scene.tscn

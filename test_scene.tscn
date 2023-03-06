@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://45eafx5d3rm6"]
+
+[ext_resource type="PackedScene" uid="uid://bciyas4uud46c" path="res://tile_board/tile_board.tscn" id="1_ugwx6"]
+[ext_resource type="PackedScene" uid="uid://dctj1xi1pada2" path="res://base_tile/base_tile.tscn" id="2_1n45v"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="TileBoard" parent="." instance=ExtResource("1_ugwx6")]
+
+[node name="BaseTile" parent="TileBoard" instance=ExtResource("2_1n45v")]
+position = Vector2(189, 139)
+
+[node name="BaseTile2" parent="TileBoard" instance=ExtResource("2_1n45v")]
+position = Vector2(424, 240)
+
+[node name="BaseTile3" parent="TileBoard" instance=ExtResource("2_1n45v")]
+position = Vector2(717, 284)
+
+[node name="BaseTile4" parent="TileBoard" instance=ExtResource("2_1n45v")]
+position = Vector2(963, 434)

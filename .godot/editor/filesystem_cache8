@@ -1,7 +1,11 @@
 2a60927148abd1d33b818b535e306557
-::res://::1678127753
+::res://::1678131562
 icon.svg::CompressedTexture2D::8754338718776069725::1678124904::1678124909::1::::<><>::
 README.md::TextFile::-1::1678127369::0::1::::<><>::
-::res://assets/::1678127753
+::res://assets/::1678131544
 board_tiles_sheet.png::CompressedTexture2D::6555009040437704577::1678127744::1678127753::1::::<><>::
 dice_sheet.png::CompressedTexture2D::1589635227180324918::1678127720::1678127733::1::::<><>::
+::res://base_tile/::1678131941
+base_tile.png::CompressedTexture2D::1377788682463748130::1678131417::1678131552::1::::<><>::
+base_tile.tscn::PackedScene::7339457020855787351::1678132375::0::1::::<><>::uid://tvn8i6hfo4nu<>res://base_tile/base_tile.gd
+base_tile.gd::GDScript::-1::1678132375::0::1::::BaseTile<>Node2D<>::
