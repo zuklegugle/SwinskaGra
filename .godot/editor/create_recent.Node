@@ -1,2 +1,7 @@
+AnimationPlayer
+Control
+TextureButton
 Sprite2D
+PathFollow2D
+Path2D
 Node2D

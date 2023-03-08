@@ -1,0 +1,140 @@
+[gd_scene load_steps=12 format=3 uid="uid://csuni0e0oubyw"]
+
+[ext_resource type="Texture2D" uid="uid://dhwlecme2gc8u" path="res://gui/dice/dice_1.png" id="1_lkw3i"]
+[ext_resource type="Script" path="res://gui/dice/gui_dice.gd" id="2_fhuhp"]
+[ext_resource type="Texture2D" uid="uid://c3i3j23xdsk32" path="res://gui/dice/dice_2.png" id="3_ortxc"]
+[ext_resource type="Texture2D" uid="uid://d1gcfrvrbfsme" path="res://gui/dice/dice_3.png" id="4_p41r0"]
+[ext_resource type="Texture2D" uid="uid://oe6wbkhi1oai" path="res://gui/dice/dice_4.png" id="5_0il55"]
+[ext_resource type="Texture2D" uid="uid://ttaovw4tl0h2" path="res://gui/dice/dice_5.png" id="6_0vgnk"]
+[ext_resource type="Texture2D" uid="uid://cmdtkbjxd736r" path="res://gui/dice/dice_6.png" id="7_ktgf0"]
+
+[sub_resource type="Animation" id="Animation_ti6hi"]
+resource_name = "roll"
+length = 0.55
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0045321, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_lkw3i"), ExtResource("3_ortxc"), ExtResource("4_p41r0"), ExtResource("5_0il55"), ExtResource("6_0vgnk"), ExtResource("7_ktgf0")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 25, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.25, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_td64i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_lkw3i")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ds0tt"]
+resource_name = "ready"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k1gti"]
+_data = {
+"RESET": SubResource("Animation_td64i"),
+"ready": SubResource("Animation_ds0tt"),
+"roll": SubResource("Animation_ti6hi")
+}
+
+[node name="Control" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -592.0
+offset_bottom = -1152.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_lkw3i")
+script = ExtResource("2_fhuhp")
+value_textures = Array[Texture2D]([ExtResource("1_lkw3i"), ExtResource("3_ortxc"), ExtResource("4_p41r0"), ExtResource("5_0il55"), ExtResource("6_0vgnk"), ExtResource("7_ktgf0")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k1gti")
+}
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
