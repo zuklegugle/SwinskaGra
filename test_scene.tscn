@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://45eafx5d3rm6"]
+[gd_scene load_steps=8 format=3 uid="uid://56vlexp2bh3f"]
 
 [ext_resource type="PackedScene" uid="uid://bciyas4uud46c" path="res://tile_board/tile_board.tscn" id="1_ugwx6"]
-[ext_resource type="PackedScene" uid="uid://rseykexuikl7" path="res://game/base_tile/base_tile.tscn" id="2_7ww23"]
+[ext_resource type="PackedScene" uid="uid://doon4sldhry02" path="res://game/board_tile/board_tile.tscn" id="2_7ww23"]
 [ext_resource type="PackedScene" uid="uid://dmc247gll5586" path="res://game/board_path/board_path.tscn" id="3_2gm3c"]
 [ext_resource type="PackedScene" uid="uid://dorvr8hcng7ed" path="res://game/board_pawn/board_pawn.tscn" id="4_8nhhi"]
+[ext_resource type="PackedScene" uid="uid://b3q8q54w6ehlo" path="res://debug/tile_display_label/tile_display_label.tscn" id="5_drynl"]
 [ext_resource type="PackedScene" uid="uid://csuni0e0oubyw" path="res://gui/dice/dice.tscn" id="5_pb4o4"]
+[ext_resource type="Script" path="res://debug/tile_display_label/tile_display_label.gd" id="6_cri2m"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -50,6 +52,10 @@ tile_board = NodePath("../TileBoard")
 [node name="BoardPawn" parent="BoardPath" instance=ExtResource("4_8nhhi")]
 position = Vector2(119, 72)
 
+[node name="TileDisplayLabel" parent="BoardPath/BoardPawn" node_paths=PackedStringArray("board_path") instance=ExtResource("5_drynl")]
+script = ExtResource("6_cri2m")
+board_path = NodePath("../..")
+
 [node name="TestGUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -62,4 +68,3 @@ offset_left = 200.0
 offset_top = 263.0
 offset_right = 288.0
 offset_bottom = 351.0
-scale = Vector2(1.5, 1.5)

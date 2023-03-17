@@ -1,3 +1,5 @@
+res://game/interactive_tile
+res://debug/tile_display_label
 res://gui/dice
 res://
 res://tile_board

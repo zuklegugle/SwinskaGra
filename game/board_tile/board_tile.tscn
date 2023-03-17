@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://doon4sldhry02"]
+
+[ext_resource type="Script" path="res://game/board_tile/board_tile.gd" id="1_f3lha"]
+[ext_resource type="Texture2D" uid="uid://tvn8i6hfo4nu" path="res://game/board_tile/board_tile.png" id="2_jyxgo"]
+
+[node name="BoardTile" type="Node2D"]
+rotation = -0.000833855
+script = ExtResource("1_f3lha")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.698039, 0.65098, 0.988235, 1)
+rotation = 0.0015854
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jyxgo")

@@ -1,7 +1,11 @@
-res://test_scene.tscn
-res://game/base_tile/base_tile.tscn
+res://game/board_tile/board_tile.tscn
 res://tile_board/tile_board.tscn
 res://game/board_path/board_path.tscn
 res://game/board_pawn/board_pawn.tscn
 res://gui/dice/dice.tscn
-res://gui/dice/gui_dice.gd
+res://test_scene.tscn
+res://game/interactive_tile/interactive_tile.tscn
+res://debug/tile_display_label/tile_display_label.gd
+res://game/board_path/board_path.gd
+res://game/board_pawn/board_pawn.gd
+res://game/interactive_tile/interactive_tile.gd
