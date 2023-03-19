@@ -1,4 +1,4 @@
-res://game/interactive_tile
+res://game/board/pawn_controller
 res://debug/tile_display_label
 res://gui/dice
 res://

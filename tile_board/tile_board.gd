@@ -34,3 +34,9 @@ func get_tile_from_index(index : int) -> BoardTile:
 func get_tile_board_position(tile : BoardTile ) -> int:
 	var index = tiles.find(tile)
 	return index
+
+func board_position_valid( board_position : int) -> bool:
+	if board_position in range(0, tiles.size() - 1):
+		return true
+	else:
+		return false

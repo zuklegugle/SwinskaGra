@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dorvr8hcng7ed"]
+
+[ext_resource type="Script" path="res://game/board/board_pawn/board_pawn.gd" id="1_4w425"]
+[ext_resource type="Texture2D" uid="uid://bajwp5yk5y8l4" path="res://game/board/board_pawn/pig_pawn.png" id="2_yovc5"]
+
+[node name="BoardPawn" type="PathFollow2D"]
+script = ExtResource("1_4w425")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yovc5")
